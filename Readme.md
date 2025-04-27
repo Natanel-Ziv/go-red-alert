@@ -6,8 +6,8 @@ A lightweight Go implementation of the Oref Alerts Proxy Service originally writ
 
 ## Features
 
-- ``: Returns the latest alert status
-- ``: Returns the alert history
+- `/current`: Returns the latest alert status
+- `/history`: Returns the alert history
 - Configurable via environment variables
 - Built-in test/mock modes
 - BOM and empty-response handling
