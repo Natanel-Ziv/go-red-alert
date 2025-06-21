@@ -41,12 +41,12 @@ func withJSON(h func(http.ResponseWriter, *http.Request)) http.HandlerFunc {
 
 func currentHandler(c *alerts.Client) func(http.ResponseWriter, *http.Request) {
     return func(w http.ResponseWriter, r *http.Request) {
-        resp, err := c.FetchCurrent(r.Context())
+        alert, err := c.FetchCurrent(r.Context())
         if err != nil {
             http.Error(w, err.Error(), http.StatusBadGateway)
             return
         }
-        json.NewEncoder(w).Encode(resp)
+        json.NewEncoder(w).Encode(alert)
     }
 }
 
