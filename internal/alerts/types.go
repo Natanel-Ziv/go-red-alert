@@ -14,7 +14,7 @@ const (
 	AlertTypeNonConventional      AlertType = 3
 	AlertTypeWarning              AlertType = 4
 	AlertTypeMemorialDay1         AlertType = 5
-	AlertTypeMemorialDay2         AlertType = 6
+	AlertTypeHostileAircraft      AlertType = 6
 	AlertTypeEarthquakeAlert1     AlertType = 7
 	AlertTypeEarthquakeAlert2     AlertType = 8
 	AlertTypeCBRNE                AlertType = 9

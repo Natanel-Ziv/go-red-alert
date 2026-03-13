@@ -14,7 +14,7 @@ func _() {
 	_ = x[AlertTypeNonConventional-3]
 	_ = x[AlertTypeWarning-4]
 	_ = x[AlertTypeMemorialDay1-5]
-	_ = x[AlertTypeMemorialDay2-6]
+	_ = x[AlertTypeHostileAircraft-6]
 	_ = x[AlertTypeEarthquakeAlert1-7]
 	_ = x[AlertTypeEarthquakeAlert2-8]
 	_ = x[AlertTypeCBRNE-9]
@@ -40,9 +40,9 @@ func _() {
 	_ = x[AlertTypeUnknown - -1]
 }
 
-const _AlertType_name = "UnknownNoneMissileAlertUAVNonConventionalWarningMemorialDay1MemorialDay2EarthquakeAlert1EarthquakeAlert2CBRNETerrorAttackTsunamiHazmatUpdateFlashMissileAlertDrillUAVDrillNonConventionalDrillWarningDrillMemorialDayDrill1MemorialDayDrill2EarthquakeDrill1EarthquakeDrill2CBRNEDrillTerrorAttackDrillTsunamiDrillHazmatDrillUpdateDrillFlashDrill"
+const _AlertType_name = "UnknownNoneMissileAlertUAVNonConventionalWarningMemorialDay1HostileAircraftEarthquakeAlert1EarthquakeAlert2CBRNETerrorAttackTsunamiHazmatUpdateFlashMissileAlertDrillUAVDrillNonConventionalDrillWarningDrillMemorialDayDrill1MemorialDayDrill2EarthquakeDrill1EarthquakeDrill2CBRNEDrillTerrorAttackDrillTsunamiDrillHazmatDrillUpdateDrillFlashDrill"
 
-var _AlertType_index = [...]uint16{0, 7, 11, 23, 26, 41, 48, 60, 72, 88, 104, 109, 121, 128, 134, 140, 145, 162, 170, 190, 202, 219, 236, 252, 268, 278, 295, 307, 318, 329, 339}
+var _AlertType_index = [...]uint16{0, 7, 11, 23, 26, 41, 48, 60, 75, 91, 107, 112, 124, 131, 137, 143, 148, 165, 173, 193, 205, 222, 239, 255, 271, 281, 298, 310, 321, 332, 342}
 
 func (i AlertType) String() string {
 	idx := int(i) - -1
