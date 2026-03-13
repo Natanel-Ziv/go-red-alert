@@ -8,22 +8,36 @@ import "encoding/json"
 type AlertType int
 
 const (
-	AlertTypeNone                          AlertType = 0
-	AlertTypeMissiles                      AlertType = 1
-	AlertTypeRadiologicalEvent             AlertType = 2
-	AlertTypeEarthQuake                    AlertType = 3
-	AlertTypeTsunami                       AlertType = 4
-	AlertTypeHostileAircraftIntrusion      AlertType = 5
-	AlertTypeHazardousMaterials            AlertType = 6
-	AlertTypeTerroristInfiltration         AlertType = 7
-	AlertTypeMissilesDrill                 AlertType = 11
-	AlertTypeEarthQuakeDrill               AlertType = 12
-	AlertTypeEnd                           AlertType = 13
-	AlertTypeGetReady                      AlertType = 14
-	AlertTypeHostileAircraftIntrusionDrill AlertType = 15
-	AlertTypeHazardousMaterialsDrill       AlertType = 16
-	AlertTypeTerroristInfiltrationDrill    AlertType = 17
-	AlertTypeUnknown                       AlertType = -1
+	AlertTypeNone                 AlertType = 0
+	AlertTypeMissileAlert         AlertType = 1
+	AlertTypeUAV                  AlertType = 2
+	AlertTypeNonConventional      AlertType = 3
+	AlertTypeWarning              AlertType = 4
+	AlertTypeMemorialDay1         AlertType = 5
+	AlertTypeMemorialDay2         AlertType = 6
+	AlertTypeEarthquakeAlert1     AlertType = 7
+	AlertTypeEarthquakeAlert2     AlertType = 8
+	AlertTypeCBRNE                AlertType = 9
+	AlertTypeTerrorAttack         AlertType = 10
+	AlertTypeTsunami              AlertType = 11
+	AlertTypeHazmat               AlertType = 12
+	AlertTypeUpdate               AlertType = 13
+	AlertTypeFlash                AlertType = 14
+	AlertTypeMissileAlertDrill    AlertType = 15
+	AlertTypeUAVDrill             AlertType = 16
+	AlertTypeNonConventionalDrill AlertType = 17
+	AlertTypeWarningDrill         AlertType = 18
+	AlertTypeMemorialDayDrill1    AlertType = 19
+	AlertTypeMemorialDayDrill2    AlertType = 20
+	AlertTypeEarthquakeDrill1     AlertType = 21
+	AlertTypeEarthquakeDrill2     AlertType = 22
+	AlertTypeCBRNEDrill           AlertType = 23
+	AlertTypeTerrorAttackDrill    AlertType = 24
+	AlertTypeTsunamiDrill         AlertType = 25
+	AlertTypeHazmatDrill          AlertType = 26
+	AlertTypeUpdateDrill          AlertType = 27
+	AlertTypeFlashDrill           AlertType = 28
+	AlertTypeUnknown              AlertType = -1
 )
 
 func (a AlertType) MarshalJSON() ([]byte, error) {

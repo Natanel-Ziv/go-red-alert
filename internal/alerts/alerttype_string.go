@@ -9,42 +9,45 @@ func _() {
 	// Re-run the stringer command to generate them again.
 	var x [1]struct{}
 	_ = x[AlertTypeNone-0]
-	_ = x[AlertTypeMissiles-1]
-	_ = x[AlertTypeRadiologicalEvent-2]
-	_ = x[AlertTypeEarthQuake-3]
-	_ = x[AlertTypeTsunami-4]
-	_ = x[AlertTypeHostileAircraftIntrusion-5]
-	_ = x[AlertTypeHazardousMaterials-6]
-	_ = x[AlertTypeTerroristInfiltration-7]
-	_ = x[AlertTypeMissilesDrill-11]
-	_ = x[AlertTypeEarthQuakeDrill-12]
-	_ = x[AlertTypeEnd-13]
-	_ = x[AlertTypeGetReady-14]
-	_ = x[AlertTypeHostileAircraftIntrusionDrill-15]
-	_ = x[AlertTypeHazardousMaterialsDrill-16]
-	_ = x[AlertTypeTerroristInfiltrationDrill-17]
+	_ = x[AlertTypeMissileAlert-1]
+	_ = x[AlertTypeUAV-2]
+	_ = x[AlertTypeNonConventional-3]
+	_ = x[AlertTypeWarning-4]
+	_ = x[AlertTypeMemorialDay1-5]
+	_ = x[AlertTypeMemorialDay2-6]
+	_ = x[AlertTypeEarthquakeAlert1-7]
+	_ = x[AlertTypeEarthquakeAlert2-8]
+	_ = x[AlertTypeCBRNE-9]
+	_ = x[AlertTypeTerrorAttack-10]
+	_ = x[AlertTypeTsunami-11]
+	_ = x[AlertTypeHazmat-12]
+	_ = x[AlertTypeUpdate-13]
+	_ = x[AlertTypeFlash-14]
+	_ = x[AlertTypeMissileAlertDrill-15]
+	_ = x[AlertTypeUAVDrill-16]
+	_ = x[AlertTypeNonConventionalDrill-17]
+	_ = x[AlertTypeWarningDrill-18]
+	_ = x[AlertTypeMemorialDayDrill1-19]
+	_ = x[AlertTypeMemorialDayDrill2-20]
+	_ = x[AlertTypeEarthquakeDrill1-21]
+	_ = x[AlertTypeEarthquakeDrill2-22]
+	_ = x[AlertTypeCBRNEDrill-23]
+	_ = x[AlertTypeTerrorAttackDrill-24]
+	_ = x[AlertTypeTsunamiDrill-25]
+	_ = x[AlertTypeHazmatDrill-26]
+	_ = x[AlertTypeUpdateDrill-27]
+	_ = x[AlertTypeFlashDrill-28]
 	_ = x[AlertTypeUnknown - -1]
 }
 
-const (
-	_AlertType_name_0 = "UnknownNoneMissilesRadiologicalEventEarthQuakeTsunamiHostileAircraftIntrusionHazardousMaterialsTerroristInfiltration"
-	_AlertType_name_1 = "MissilesDrillEarthQuakeDrillEndGetReadyHostileAircraftIntrusionDrillHazardousMaterialsDrillTerroristInfiltrationDrill"
-)
+const _AlertType_name = "UnknownNoneMissileAlertUAVNonConventionalWarningMemorialDay1MemorialDay2EarthquakeAlert1EarthquakeAlert2CBRNETerrorAttackTsunamiHazmatUpdateFlashMissileAlertDrillUAVDrillNonConventionalDrillWarningDrillMemorialDayDrill1MemorialDayDrill2EarthquakeDrill1EarthquakeDrill2CBRNEDrillTerrorAttackDrillTsunamiDrillHazmatDrillUpdateDrillFlashDrill"
 
-var (
-	_AlertType_index_0 = [...]uint8{0, 7, 11, 19, 36, 46, 53, 77, 95, 116}
-	_AlertType_index_1 = [...]uint8{0, 13, 28, 31, 39, 68, 91, 117}
-)
+var _AlertType_index = [...]uint16{0, 7, 11, 23, 26, 41, 48, 60, 72, 88, 104, 109, 121, 128, 134, 140, 145, 162, 170, 190, 202, 219, 236, 252, 268, 278, 295, 307, 318, 329, 339}
 
 func (i AlertType) String() string {
-	switch {
-	case -1 <= i && i <= 7:
-		i -= -1
-		return _AlertType_name_0[_AlertType_index_0[i]:_AlertType_index_0[i+1]]
-	case 11 <= i && i <= 17:
-		i -= 11
-		return _AlertType_name_1[_AlertType_index_1[i]:_AlertType_index_1[i+1]]
-	default:
+	idx := int(i) - -1
+	if i < -1 || idx >= len(_AlertType_index)-1 {
 		return "AlertType(" + strconv.FormatInt(int64(i), 10) + ")"
 	}
+	return _AlertType_name[_AlertType_index[idx]:_AlertType_index[idx+1]]
 }

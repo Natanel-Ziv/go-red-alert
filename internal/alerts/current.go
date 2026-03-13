@@ -13,7 +13,7 @@ func (c *Client) FetchCurrent(ctx context.Context) (*ActiveAlert, error) {
 	// test-mode shortcut
 	if c.cfg.TestCurrentMode {
 		return &ActiveAlert{
-			Type:         AlertTypeMissiles,
+			Type:         AlertTypeMissileAlert,
 			Cities:       []string{"Tel Aviv"},
 			Instructions: "היכנסו למרחב מוגן",
 		}, nil
